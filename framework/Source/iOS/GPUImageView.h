@@ -37,4 +37,9 @@ typedef enum {
 
 - (void)setCurrentlyReceivingMonochromeInput:(BOOL)newValue;
 
+// Managing the display FBOs
+- (void)createDisplayFramebuffer;
+- (void)destroyDisplayFramebuffer;
+- (void)presentFramebuffer;
+
 @end

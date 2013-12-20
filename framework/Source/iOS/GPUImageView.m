@@ -25,10 +25,6 @@
 // Initialization and teardown
 - (void)commonInit;
 
-// Managing the display FBOs
-- (void)createDisplayFramebuffer;
-- (void)destroyDisplayFramebuffer;
-
 // Handling fill mode
 - (void)recalculateViewGeometry;
 
@@ -214,7 +210,7 @@
     glViewport(0, 0, (GLint)_sizeInPixels.width, (GLint)_sizeInPixels.height);
 }
 
-- (void)presentFramebuffer;
+- (void)presentFramebuffer
 {
     glBindRenderbuffer(GL_RENDERBUFFER, displayRenderbuffer);
     [[GPUImageContext sharedImageProcessingContext] presentBufferForDisplay];
